@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencatat Pemasukan Cantik</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h2>Pencatat Pemasukan</h2>
+    </header>
+
+    <div class="container">
+        <div class="balance-container">
+            <h4>Total Pemasukan Anda</h4>
+            <h1 id="balance">Rp 0.00</h1>
+        </div>
+
+        <h3>Riwayat Pemasukan</h3>
+        <ul id="list" class="list">
+            </ul>
+
+        <h3>Tambah Pemasukan Baru</h3>
+        <form id="form">
+            <div class="form-control">
+                <label for="text">Deskripsi</label>
+                <input type="text" id="text" placeholder="Contoh: Gaji bulanan..." required>
+            </div>
+            <div class="form-control">
+                <label for="amount">Jumlah Pemasukan</label>
+                <input type="number" id="amount" placeholder="Masukkan jumlah..." min="1" step="any" required>
+            </div>
+            <button class="btn">Tambah Pemasukan</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

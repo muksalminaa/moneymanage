@@ -1,0 +1,188 @@
+/* Mengimpor font Poppins dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variabel warna untuk kemudahan kustomisasi */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --text-on-dark: #ffffff;
+  --text-on-light: #212529;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+/* Reset dasar dan pengaturan body */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark-color);
+  color: var(--text-on-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Header Utama */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h2 {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--light-color);
+}
+
+/* Container utama untuk konten aplikasi */
+.container {
+  background-color: var(--light-color);
+  color: var(--text-on-light);
+  padding: 30px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Tampilan Saldo */
+.balance-container {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.balance-container h4 {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--secondary-color);
+}
+
+.balance-container h1 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: var(--success-color);
+  margin-top: 5px;
+}
+
+/* Judul setiap bagian */
+h3 {
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 10px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: var(--text-on-light);
+}
+
+/* Form Styling */
+.form-control {
+  margin-bottom: 15px;
+}
+
+.form-control label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--secondary-color);
+}
+
+.form-control input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ced4da;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+/* Tombol utama */
+.btn {
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: var(--text-on-dark);
+  border: none;
+  border-radius: var(--border-radius);
+  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 12px;
+  width: 100%;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3; /* Warna biru lebih gelap saat hover */
+}
+
+/* List Riwayat Transaksi */
+.list {
+  list-style-type: none;
+}
+
+.list li {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.07);
+  border-left: 5px solid var(--success-color);
+  transition: transform 0.2s ease-in-out;
+}
+
+.list li:hover {
+  transform: scale(1.02);
+}
+
+.list li span {
+  font-weight: 600;
+  color: var(--success-color);
+}
+
+/* Tombol Hapus */
+.delete-btn {
+  background-color: var(--danger-color);
+  color: var(--text-on-dark);
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: -35px; /* Posisi awal di luar list item */
+  transform: translateY(-50%);
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease, left 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+  left: -12px; /* Muncul ke samping list item saat hover */
+}
